@@ -3,27 +3,23 @@
 #define SIZE 5
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int main(int argc, char *argv[]) {
-	//array declaration
+int main(void)
+{
+int i;
+int grade[SIZE];
+int score[SIZE];
+
+for (i=0; i<SIZE; i++)
+{
+	grade[i] = rand()%100+1;
+ } 
+ //move to score
+ 
+ for (i=0; i<SIZE; i++)
+    score[i] = grade[i];
+ 
+ for (i=0; i<SIZE; i++)
+    printf("score[%d] %i (%i)\n",  i , score[i], grade[i]);
 	
-	int grade[SIZE];
-	int i, average, sum;
-	sum = 0;
-	
-	printf("input %i scores\n", SIZE);
-	
-	
-	for ( i=0; i<SIZE; i++)
-	{
-	scanf("%d", &grade[i]);
-	sum += grade[i];
-}
-	
-	
-	for (i=0; i<SIZE; i++)
-	 printf("grade[%d] = %d\n", i, grade[i]);
-	 average=sum/SIZE;
-	 
-	 printf("average is %i\n", average);
 	return 0;
 }
